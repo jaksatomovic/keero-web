@@ -4,8 +4,8 @@ export const CTA = () => {
   return (
     <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="retro-card text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="retro-card retro-not-selected text-center space-y-8">
+          <h2 className="text-4xl md:text-5xl brand-font mb-4">
             Ready to Get Started?
           </h2>
           <p className="text-xl text-[var(--color-retro-fg-secondary)] max-w-2xl mx-auto">

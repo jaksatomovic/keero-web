@@ -32,7 +32,7 @@ export const HowItWorks = () => {
     <section className="py-20 px-4 bg-[var(--color-retro-card)]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-4xl md:text-5xl brand-font mb-4">How It Works</h2>
           <p className="text-xl text-[var(--color-retro-fg-secondary)] max-w-2xl mx-auto">
             Getting started with KEERO is simple. Here's everything you need to know.
           </p>
@@ -58,7 +58,7 @@ export const HowItWorks = () => {
                   <div className="text-sm font-bold text-[var(--color-retro-accent)]">
                     Step {index + 1}
                   </div>
-                  <h3 className="text-xl font-semibold">{step.title}</h3>
+                  <h3 className="text-xl font-black leading-tight">{step.title}</h3>
                   <p className="text-sm text-[var(--color-retro-fg-secondary)]">
                     {step.description}
                   </p>

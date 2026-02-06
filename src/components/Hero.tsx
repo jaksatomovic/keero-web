@@ -9,7 +9,7 @@ export const Hero = () => {
           <Logo />
         </div>
         
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <h1 className="text-5xl md:text-6xl brand-font mb-6">
           Your Cute Personal AI Companion
           <br />
           <span className="text-[var(--color-retro-accent)]">for Creators</span>

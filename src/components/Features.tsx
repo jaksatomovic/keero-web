@@ -56,7 +56,7 @@ export const Features = () => {
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Everything You Need</h2>
+          <h2 className="text-4xl md:text-5xl brand-font mb-4">Everything You Need</h2>
           <p className="text-xl text-[var(--color-retro-fg-secondary)] max-w-2xl mx-auto">
             A complete toolkit for creating AI-powered experiences, all running locally on your Mac.
           </p>
@@ -68,7 +68,7 @@ export const Features = () => {
             return (
               <div
                 key={index}
-                className="retro-card flex flex-col gap-4 hover:scale-[1.02] transition-transform"
+                className="retro-card retro-not-selected flex flex-col gap-4 transition-all hover:shadow-[var(--shadow-retro-hover)]"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center"
@@ -76,7 +76,7 @@ export const Features = () => {
                 >
                   <Icon size={24} style={{ color: feature.color }} />
                 </div>
-                <h3 className="text-lg font-semibold">{feature.title}</h3>
+                <h3 className="text-lg font-black leading-tight">{feature.title}</h3>
                 <p className="text-sm text-[var(--color-retro-fg-secondary)]">
                   {feature.description}
                 </p>

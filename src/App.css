@@ -1,0 +1,356 @@
+@import "tailwindcss";
+
+:root {
+  /* Background colors */
+  --color-retro-bg: #F7F8FA;
+  --color-retro-card: #FFFFFF;
+  --color-retro-card-hover: #FAFBFC;
+  
+  /* Text colors */
+  --color-retro-fg: #1A1D24;
+  --color-retro-fg-secondary: #6B7280;
+  --color-retro-fg-muted: #9AA0AA;
+  
+  /* Accent colors - soft modern pastel */
+  --color-retro-accent: #7C8DFF;
+  --color-retro-accent-hover: #8A9AFF;
+  --color-retro-accent-light: rgba(124, 141, 255, 0.1);
+  --color-retro-secondary: #9EE6CF;
+  --color-retro-warning: #F4C095;
+  --color-retro-error: #E57373;
+  
+  /* Legacy colors for compatibility (softer versions) */
+  --color-retro-yellow: #F4C095;
+  --color-retro-green: #9EE6CF;
+  --color-retro-green-hover: #8DD9C0;
+  --color-retro-blue: #7C8DFF;
+  
+  /* Borders */
+  --color-retro-border: rgba(0, 0, 0, 0.08);
+  --color-retro-border-light: rgba(124, 141, 255, 0.2);
+  
+  /* Radius */
+  --radius-retro: 20px;
+  --radius-retro-sm: 14px;
+  
+  /* Shadows - softer and more subtle */
+  --shadow-retro: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-retro-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-retro-hover: 0 6px 20px rgba(0, 0, 0, 0.1);
+  --shadow-button: 0 2px 8px rgba(124, 141, 255, 0.25);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-retro-bg);
+    color: var(--color-retro-fg);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-weight: 400;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--color-retro-fg);
+  }
+}
+
+@layer utilities {
+  @keyframes retro-blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.55;
+    }
+  }
+
+  .retro-blink {
+    animation: retro-blink 1.8s ease-in-out infinite;
+  }
+
+  .retro-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .retro-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .retro-dotted {
+    border: 2px dashed #aaa;
+  }
+
+  .retro-shadow {
+    box-shadow: var(--shadow-retro);
+    border: 1px solid var(--color-retro-border);
+    border-radius: var(--radius-retro);
+  }
+
+  .retro-shadow-sm {
+    box-shadow: var(--shadow-retro-sm);
+    border: 1px solid var(--color-retro-border);
+    border-radius: var(--radius-retro-sm);
+  }
+
+  .retro-card.retro-selected {
+    border: 1px solid var(--color-retro-accent);
+    box-shadow: 0 0 0 3px var(--color-retro-accent-light), var(--shadow-retro-sm);
+  }
+
+  .retro-card.retro-not-selected {
+    border: 1px solid var(--color-retro-border);
+    box-shadow: var(--shadow-retro-sm);
+  }
+
+  .retro-dots {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+    background-size: 18px 18px;
+    background-position: -1px -1px;
+  }
+
+  .brand-font {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+
+  .retro-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--color-retro-accent);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 14px;
+    box-shadow: var(--shadow-button);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .retro-btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .retro-btn-purple {
+    background-color: var(--color-retro-accent);
+    color: white;
+    box-shadow: var(--shadow-button);
+  }
+
+  .retro-btn-green {
+    background-color: var(--color-retro-green);
+    color: var(--color-retro-fg);
+    box-shadow: 0 2px 8px rgba(158, 230, 207, 0.3);
+  }
+
+  .retro-btn-outline {
+    background-color: transparent;
+    color: var(--color-retro-fg);
+    border: 1px solid var(--color-retro-border-light);
+    box-shadow: none;
+  }
+
+  .retro-btn:hover {
+    transform: scale(1.01);
+    filter: brightness(1.05);
+    box-shadow: 0 4px 12px rgba(124, 141, 255, 0.35);
+  }
+
+  .retro-btn:disabled,
+  .retro-btn[disabled] {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .retro-btn:disabled:hover,
+  .retro-btn[disabled]:hover {
+    transform: none;
+  }
+
+  .retro-btn-outline:hover {
+    background-color: var(--color-retro-accent-light);
+    border-color: var(--color-retro-accent);
+    transform: scale(1.01);
+  }
+
+  .retro-btn.no-lift:hover {
+    transform: none;
+    filter: brightness(1.05);
+  }
+
+  .retro-btn-outline.no-lift:hover {
+    transform: none;
+    background-color: var(--color-retro-accent-light);
+  }
+
+  .retro-btn-dangerous-outline {
+    background-color: rgba(229, 115, 115, 0.1);
+    color: var(--color-retro-error);
+    border: 1px solid rgba(229, 115, 115, 0.3);
+    box-shadow: none;
+  }
+
+  .retro-btn-dangerous-outline:hover {
+    background-color: rgba(229, 115, 115, 0.15);
+    border-color: var(--color-retro-error);
+    transform: scale(1.01);
+  }
+
+  .retro-btn-dangerous-outline:active {
+    transform: scale(0.99);
+  }
+
+  .retro-btn:active {
+    transform: scale(0.98);
+  }
+
+  .retro-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-retro-card);
+    border: 1px solid var(--color-retro-border-light);
+    box-shadow: none;
+    border-radius: var(--radius-retro-sm);
+    outline: none;
+    color: var(--color-retro-fg);
+    transition: all 0.2s ease;
+  }
+  .retro-input:focus {
+    outline: none;
+    border-color: var(--color-retro-accent);
+    box-shadow: 0 0 0 3px rgba(124, 141, 255, 0.1);
+  }
+  .retro-input::placeholder {
+    color: var(--color-retro-fg-muted);
+  }
+
+  .retro-card {
+    background-color: var(--color-retro-card);
+    padding: 1.5rem;
+    border: 1px solid var(--color-retro-border);
+    box-shadow: var(--shadow-retro-sm);
+    border-radius: var(--radius-retro);
+    transition: all 0.2s ease;
+  }
+  
+  .retro-card:hover {
+    box-shadow: var(--shadow-retro-hover);
+  }
+
+   .retro-card-no-padding {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .retro-card-outline {
+    background-color: transparent;
+    padding: 1.5rem;
+    border: 1px solid var(--color-retro-border);
+    box-shadow: none;
+    border-radius: var(--radius-retro);
+  }
+
+  .retro-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    transition: all 0.2s ease;
+    color: var(--color-retro-fg-secondary);
+  }
+  .retro-icon-btn:hover {
+    background: var(--color-retro-accent-light);
+    color: var(--color-retro-accent);
+  }
+  .retro-icon-btn:active {
+    transform: scale(0.95);
+  }
+
+  .retro-range {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+  }
+  .retro-range::-webkit-slider-runnable-track {
+    height: 6px;
+    background: var(--color-retro-border);
+    border-radius: 9999px;
+  }
+  .retro-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: var(--color-retro-accent);
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: -6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .retro-range::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(124, 141, 255, 0.4);
+  }
+  .retro-range::-moz-range-track {
+    height: 6px;
+    background: var(--color-retro-border);
+    border-radius: 9999px;
+    border: none;
+  }
+  .retro-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: var(--color-retro-accent);
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .retro-range::-moz-range-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(124, 141, 255, 0.4);
+  }
+
+  /* Checkbox styling */
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-retro-accent);
+    cursor: pointer;
+  }
+
+  /* Select dropdown styling */
+  select.retro-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B7280' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+    appearance: none;
+  }
+}

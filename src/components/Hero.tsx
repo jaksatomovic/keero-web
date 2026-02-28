@@ -10,14 +10,15 @@ export const Hero = () => {
         </div>
         
         <h1 className="text-5xl md:text-6xl brand-font mb-6">
-          Your Cute Personal AI Companion
+          A Cute Modular AI Robot
           <br />
-          <span className="text-[var(--color-retro-accent)]">for Creators</span>
+          <span className="text-[var(--color-retro-accent)]">for Home, Makers, and Play</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-[var(--color-retro-fg-secondary)] max-w-2xl mx-auto mb-8">
-          Local AI toys, voice cloning, and interactive experiences. 
-          Everything runs on your machine—no cloud, no tracking, just pure creativity.
+          KEERO is becoming an all-in-one expressive robot platform:
+          local voice brain, emotional behavior engine, hardware module bus,
+          and compatible strip-style add-ons inspired by SparkBot workflows.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -28,7 +29,7 @@ export const Hero = () => {
             className="retro-btn text-lg px-8 py-4 flex items-center gap-2"
           >
             <Download size={20} />
-            Download for macOS
+            Download desktop app
           </a>
           <a
             href="https://github.com/jaksatomovic/keero-local"
@@ -37,12 +38,12 @@ export const Hero = () => {
             className="retro-btn retro-btn-outline text-lg px-8 py-4 flex items-center gap-2"
           >
             <Sparkles size={20} />
-            View on GitHub
+            View development
           </a>
         </div>
         
         <div className="mt-12 text-sm text-[var(--color-retro-fg-muted)]">
-          <p>✨ 100% Local • 🔒 Private • 🎨 Open Source</p>
+          <p>✨ Local-first brain • 🤖 Modular hardware • 🔒 Privacy by design</p>
         </div>
       </div>
     </section>

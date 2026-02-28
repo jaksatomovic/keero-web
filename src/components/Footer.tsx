@@ -9,7 +9,7 @@ export const Footer = () => {
           <div className="flex items-center gap-4">
             <Logo />
             <span className="text-sm text-[var(--color-retro-fg-secondary)]">
-              Local AI Companion for Creators
+              Modular expressive robot platform
             </span>
           </div>
           
@@ -39,7 +39,7 @@ export const Footer = () => {
           <p className="text-xs text-[var(--color-retro-fg-muted)]">
             © {new Date().getFullYear()} KEERO. Made with ❤️ by Jakša Tomović.
             <br />
-            Open source and free to use.
+            Built from Clawino roots, evolving toward WireClaw all-in-one.
           </p>
         </div>
       </div>

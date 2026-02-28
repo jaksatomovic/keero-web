@@ -6,11 +6,11 @@ export const CTA = () => {
       <div className="max-w-4xl mx-auto">
         <div className="retro-card retro-not-selected text-center space-y-8">
           <h2 className="text-4xl md:text-5xl brand-font mb-4">
-            Ready to Get Started?
+            Build the Companion You Want
           </h2>
           <p className="text-xl text-[var(--color-retro-fg-secondary)] max-w-2xl mx-auto">
-            Download KEERO and start creating AI experiences on your Mac today.
-            It's free, open source, and runs entirely on your machine.
+            KEERO is evolving into a full robot platform: local brain, expressive behavior, modular hardware, and creator tooling.
+            Follow the build and start experimenting now.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
@@ -21,7 +21,7 @@ export const CTA = () => {
               className="retro-btn text-lg px-8 py-4 flex items-center gap-2"
             >
               <Download size={20} />
-              Download Now
+              Download desktop build
             </a>
             <a
               href="https://github.com/jaksatomovic/keero-local"
@@ -30,15 +30,15 @@ export const CTA = () => {
               className="retro-btn retro-btn-outline text-lg px-8 py-4 flex items-center gap-2"
             >
               <Github size={20} />
-              View Source Code
+              Explore source
             </a>
           </div>
           
           <div className="pt-8 border-t border-[var(--color-retro-border)]">
             <p className="text-sm text-[var(--color-retro-fg-muted)]">
-              Requires macOS with Apple Silicon (M1/M2/M3/M4). 
+              Current focus: Apple Silicon desktop tooling + ESP-class hardware runtime.
               <br />
-              Built with Tauri, React, and Python.
+              Built with Tauri, React, embedded C/C++, and modular robotics concepts.
             </p>
           </div>
         </div>

@@ -1,28 +1,46 @@
-import { Code, Download, Zap, Users } from "lucide-react";
+import { Brain, Cable, Cpu, Mic, Palette, Wrench } from "lucide-react";
 
 const steps = [
   {
-    icon: Download,
-    title: "Download & Install",
-    description: "Download KEERO for macOS. It's a single app bundle—no complex setup required.",
+    icon: Brain,
+    title: "Companion State Engine",
+    description:
+      "Mood core tracks social, energy, and focus signals over time to produce CALM, CURIOUS, PLAYFUL, TIRED, and OVERSTIMULATED states.",
     color: "#7C8DFF",
   },
   {
-    icon: Code,
-    title: "Choose Your Model",
-    description: "Select from pre-configured AI models or use your own. Everything runs locally on your Mac.",
+    icon: Mic,
+    title: "Voice + Intent Layer",
+    description:
+      "Speech input and expressive response output drive natural interaction loops, with local-first control over behavior.",
     color: "#9EE6CF",
   },
   {
-    icon: Zap,
-    title: "Create & Customize",
-    description: "Build characters, stories, games, and clone voices. Customize everything to your liking.",
+    icon: Cable,
+    title: "Modular Hardware Bus",
+    description:
+      "Planned compatibility with SparkBot-style strip modules means expandable sensors and interaction blocks without redesigning the base.",
     color: "#F4C095",
   },
   {
-    icon: Users,
-    title: "Share & Extend",
-    description: "Install community addon packs or create your own. Share your creations with others.",
+    icon: Palette,
+    title: "Expression Stack",
+    description:
+      "Emotes, GIF animations, themes, tints, haptics, and sound FX map to mood/state so the robot feels alive and readable.",
+    color: "#7C8DFF",
+  },
+  {
+    icon: Cpu,
+    title: "Desktop + Firmware Tooling",
+    description:
+      "Desktop app assists creation and control, while firmware handles real-time execution on ESP-class hardware.",
+    color: "#9EE6CF",
+  },
+  {
+    icon: Wrench,
+    title: "WireClaw Convergence",
+    description:
+      "WireClaw functionality is being merged in to create one coherent all-in-one robotics software and hardware experience.",
     color: "#7C8DFF",
   },
 ];
@@ -32,13 +50,13 @@ export const HowItWorks = () => {
     <section className="py-20 px-4 bg-[var(--color-retro-card)]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl brand-font mb-4">How It Works</h2>
+          <h2 className="text-4xl md:text-5xl brand-font mb-4">System Blueprint</h2>
           <p className="text-xl text-[var(--color-retro-fg-secondary)] max-w-2xl mx-auto">
-            Getting started with KEERO is simple. Here's everything you need to know.
+            Core layers behind KEERO, from behavioral intelligence to hardware integration.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (

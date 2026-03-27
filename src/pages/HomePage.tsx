@@ -32,7 +32,6 @@ export function HomePage() {
   const [activeThumb, setActiveThumb] = useState(0);
   const [activeMode, setActiveMode] = useState<ModeKey>("clock");
   const igSliderRef = useRef<HTMLDivElement | null>(null);
-  const reviewsRef = useRef<HTMLDivElement | null>(null);
 
   const galleryImages = {
     "1": "Tco563vxKZEKs5W2crWZNX6OM.jpeg.webp",
@@ -70,16 +69,6 @@ export function HomePage() {
       "/assets/gif/Happy.webm",
       "/assets/gif/Hello.webm",
       "/assets/gif/Sulks.webm",
-    ],
-    []
-  );
-
-  const shoppingVideos = useMemo(
-    () => [
-      "/assets/shoppingsection/1.webm",
-      "/assets/shoppingsection/2.webm",
-      "/assets/shoppingsection/3.webm",
-      "/assets/shoppingsection/4.webm",
     ],
     []
   );

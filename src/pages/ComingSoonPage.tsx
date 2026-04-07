@@ -56,8 +56,8 @@ export function ComingSoonPage() {
           <div className="keero-maintenance__visual">
             <div className="keero-maintenance__visual-frame">
               <img
-                src="/productImg.webp"
-                alt="Keero Bot product preview"
+                src="/PCB.png"
+                alt="Keero Bot PCB preview"
                 className="keero-maintenance__image"
               />
             </div>

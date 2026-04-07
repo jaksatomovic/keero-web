@@ -11,8 +11,14 @@ import { ExperiencePage } from "./pages/ExperiencePage";
 import { FaqPage } from "./pages/FaqPage";
 import { ShippingPage } from "./pages/ShippingPage";
 import { BulkOrdersPage } from "./pages/BulkOrdersPage";
+import { ComingSoonPage } from "./pages/ComingSoonPage";
+import { siteFlags } from "./keero/siteFlags";
 
 export default function App() {
+  if (siteFlags.maintenanceMode) {
+    return <ComingSoonPage />;
+  }
+
   return (
     <BrowserRouter>
       <Routes>

@@ -79,27 +79,27 @@ export function ComingSoonPage() {
   const valueCards = [
     {
       title: "ESP32-S3 AI-ready core",
-      body: "A compact Wi-Fi and BLE platform for local firmware experiments, connected tools, voice workflows, and edge-AI prototypes.",
+      body: "ESP32-S3-WROOM-1U-N16R8 gives the prototype a compact Wi-Fi and BLE base for firmware, voice, and connected AI experiments.",
     },
     {
-      title: "Real power management",
-      body: "The board is built around an AXP2101-style PMIC direction, giving the project a more serious battery and rail-management foundation than a simple breakout.",
+      title: "PMIC-based power direction",
+      body: "AXP2101 is used as the power-management direction for battery-aware prototypes, instead of treating the board like a simple USB-only breakout.",
     },
     {
-      title: "Multi-modal hardware",
-      body: "Camera path, microphone, speaker output, display support, haptics, and motion sensing make it useful for interactive devices, not just blinking LEDs.",
+      title: "Integrated interaction hardware",
+      body: "MAX98357A audio output, ICS-41350 microphone input, LIS2DW12 motion sensing, and DRV2605L haptics support richer interaction experiments.",
+    },
+    {
+      title: "Camera and display paths",
+      body: "Batch 1 includes connector paths for camera and small display workflows. It is not sold as a finished camera product unless a camera module is explicitly included.",
+    },
+    {
+      title: "Modular expansion concept",
+      body: "Pogo/module connector thinking is used for dock-style add-ons and future mobility experiments, rather than exposing lots of general-purpose GPIO.",
     },
     {
       title: "AI service potential",
-      body: "Use it as a hardware front-end for firmware stacks and services such as Xiaozhi-style assistants, OpenAI APIs, DeepSeek, or your own local/server logic.",
-    },
-    {
-      title: "Modular expansion",
-      body: "Pogo-style module thinking, dock concepts, and mobility experiments give the board room to grow beyond one fixed demo.",
-    },
-    {
-      title: "Open docs and firmware direction",
-      body: "You get access to documentation and firmware work so you can inspect, modify, and build your own device instead of waiting for a closed product.",
+      body: "Use it as a prototype hardware front-end for Xiaozhi-style assistants, OpenAI APIs, DeepSeek, or your own local/server firmware logic.",
     },
   ];
 
@@ -114,21 +114,23 @@ export function ComingSoonPage() {
           <div className="keero-maintenance__copy">
             <p className="keero-maintenance__status">Batch 1 pre-order</p>
             <h1 className="keero-maintenance__title">
-              Keero Dev Board
+              Keero Prototype Board
             </h1>
             <p className="keero-maintenance__text">
-              Keero is a small development board for building AI-powered
-              devices, from desktop assistants and e-ink displays to fully
-              custom smart tools.
+              Keero Batch 1 is an early ESP32-S3 based modular AI hardware
+              prototype. It is the temporary hardware step before the finished
+              Keero consumer gadget.
             </p>
             <p className="keero-maintenance__text">
-              This is not a finished consumer product. It is a developer-focused
-              board for makers, engineers, and enthusiasts who want to build
-              their own solutions.
+              This is not a cheap ESP32-CAM replacement and not a generic
+              GPIO-heavy dev board. It is for makers and early supporters who
+              want to test the same integrated hardware direction the final
+              device is being built around.
             </p>
             <p className="keero-maintenance__text">
-              Batch 1 is produced only after enough orders are collected. Each
-              reservation directly helps fund the first production run.
+              Small-batch prototyping is expensive. The Batch 1 price is now
+              lowered to mainly help cover production cost and make early
+              feedback easier.
             </p>
 
             <div className="keero-maintenance__price-card">
@@ -160,7 +162,7 @@ export function ComingSoonPage() {
             <div className="keero-maintenance__meta">
               <div className="keero-maintenance__meta-card">
                 <span className="keero-maintenance__meta-label">What you get</span>
-                <strong>Keero PCB, firmware access, and documentation</strong>
+                <strong>Batch 1 board, firmware access, and documentation</strong>
               </div>
               <div className="keero-maintenance__meta-card">
                 <span className="keero-maintenance__meta-label">Shipping estimate</span>
@@ -168,7 +170,7 @@ export function ComingSoonPage() {
               </div>
               <div className="keero-maintenance__meta-card">
                 <span className="keero-maintenance__meta-label">Important</span>
-                <strong>Developer board, not plug and play</strong>
+                <strong>Early prototype, not plug and play</strong>
               </div>
             </div>
 
@@ -176,6 +178,11 @@ export function ComingSoonPage() {
               Payments are processed via PayPal Buy Now. Refunds are possible
               before production starts. Delivery timing is estimated and depends
               on the final Batch 1 production schedule.
+            </p>
+            <p className="keero-maintenance__text">
+              Camera and display references mean connector paths on the board.
+              They are not complete finished subsystems unless a module is
+              explicitly listed with the batch.
             </p>
           </div>
 
@@ -197,13 +204,14 @@ export function ComingSoonPage() {
           <div className="keero-maintenance__value-copy">
             <p className="keero-maintenance__status">Why it costs what it costs</p>
             <h2 className="keero-maintenance__section-title">
-              More than a bare dev board.
+              Built for the next Keero device.
             </h2>
             <p className="keero-maintenance__text">
-              Keero is priced as an early developer board because it combines
-              the hardware blocks needed for real AI-device experiments:
-              sensing, audio, display, feedback, power management, and modular
-              expansion in one small platform.
+              Keero is priced as a small-batch prototype, not as a
+              mass-produced ESP32 module. The value is the integrated device
+              direction: power management, audio, sensing, haptics,
+              camera/display connector paths, and modular expansion in one
+              compact platform.
             </p>
           </div>
 
@@ -231,11 +239,11 @@ export function ComingSoonPage() {
           </div>
 
           <div className="keero-maintenance__qr">
-            <img
+              <img
               src="/paypal-batch-1-qrcode.png"
-              alt="PayPal QR code for Keero Dev Board Batch 1 pre-order"
+              alt="PayPal QR code for Keero Prototype Board Batch 1 pre-order"
             />
-            <p>Keero Dev Board - Batch 1 PayPal checkout</p>
+            <p>Keero Prototype Board - Batch 1 PayPal checkout</p>
           </div>
         </section>
       </section>

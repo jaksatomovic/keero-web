@@ -220,7 +220,9 @@ export function ComingSoonPage() {
               So I started building a compact modular platform with an ESP32-S3
               core, PMIC-based power management, interaction hardware, and
               add-on modules, with the long-term goal of turning it into a cute
-              expressive desktop companion.
+              expressive desktop companion, with the software and behavior
+              direction also learning from projects such as Byte90, MimicLaw,
+              and WireClaw.
             </p>
           </div>
         </section>

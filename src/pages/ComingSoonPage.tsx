@@ -202,6 +202,31 @@ export function ComingSoonPage() {
 
         <section className="keero-maintenance__value">
           <div className="keero-maintenance__value-copy">
+            <p className="keero-maintenance__status">Why Keero exists</p>
+            <h2 className="keero-maintenance__section-title">
+              Between a dev board and a real product.
+            </h2>
+            <p className="keero-maintenance__text">
+              Keero exists because I wanted something between a dev board and a
+              real product.
+            </p>
+            <p className="keero-maintenance__text">
+              I liked parts of existing projects, but not the compromises.
+              Small ESP32 boards often felt too limited for a more complete
+              battery-powered device, while modular robot projects did not match
+              the firmware and hardware direction I wanted.
+            </p>
+            <p className="keero-maintenance__text">
+              So I started building a compact modular platform with an ESP32-S3
+              core, PMIC-based power management, interaction hardware, and
+              add-on modules, with the long-term goal of turning it into a cute
+              expressive desktop companion.
+            </p>
+          </div>
+        </section>
+
+        <section className="keero-maintenance__value">
+          <div className="keero-maintenance__value-copy">
             <p className="keero-maintenance__status">Why it costs what it costs</p>
             <h2 className="keero-maintenance__section-title">
               Built for the next Keero device.
